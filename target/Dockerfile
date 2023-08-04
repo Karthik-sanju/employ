@@ -1,4 +1,7 @@
 
-FROM openjdk:12-alpine
-COPY target/Employee-Management-0.0.1-SNAPSHOT.jar
-CMD ["java", "-jar", "/Employee-Management-0.0.1-SNAPSHOT.jar" ]
+FROM ubuntu
+MAINTAINER myKARTHIK
+WORKDIR /
+ADD Employee-Management-0.0.1-SNAPSHOT.jar  /home/linux/employ/target/Employee-Management-0.0.1-SNAPSHOT.jar
+EXPOSE 80
+CMD java -jar /home/linux/employ/target/Employee-Management-0.0.1-SNAPSHOT.jar
